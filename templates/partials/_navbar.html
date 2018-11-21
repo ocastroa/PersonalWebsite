@@ -14,18 +14,29 @@
             <a class="nav-link" href="{% url 'about' %}">About</a>
             </li>
             <li class="nav-item mr-3">
-            <a class="nav-link" href="listings.html">Portfolio</a>
+            <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
             </li>
             <li class="nav-item mr-3">
-            <a class="nav-link" href="listings.html">Resume</a>
+            <a class="nav-link" href="{% url 'index' %}">Resume</a>
             </li>
             <li class="nav-item mr-3">
-            <a class="nav-link" href="listings.html">Blog</a>
+            <a class="nav-link" href="{% url 'index' %}">Blog</a>
             </li>
             <li class="nav-item mr-3">
-            <a class="nav-link" href="listings.html">Contact</a>
+            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
             </li>
         </ul>
-        </div>
+        </div>   
+        <div class="social text-right">
+        <a href="#">
+            <i class="fab fa-linkedin" style="font-size: 1.2em;"></i>
+        </a>
+        <a href="#">
+            <i class="fab fa-github" style="font-size: 1.2em;"></i>
+        </a>
+        <a href="#">
+            <i class="fab fa-medium-m" style="font-size: 1.2em;"></i>
+        </a>
+        </div>    
     </div>
 </nav>
