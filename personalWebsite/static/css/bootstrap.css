@@ -1340,10 +1340,11 @@ select.form-control[size], select.form-control[multiple] {
   height: auto; }
 
 textarea.form-control {
-  height: auto; }
+  height: 130px; }
 
 .form-group {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+ }
 
 .form-text {
   display: block;
@@ -3825,8 +3826,12 @@ button.close {
 
 .modal-body {
   position: relative;
-  flex: 1 1 auto;
-  padding: 1rem; }
+  width: 50%;
+  /* flex: 1 1 auto; */
+  margin-top: 15%;
+  /* padding: 1rem;  */
+  left: 52%;
+  transform: translate(-50%, -52%);}
 
 .modal-footer {
   display: flex;
@@ -6186,13 +6191,17 @@ button.bg-dark:focus {
   color: #fff !important; }
 
 .text-primary {
+   font-size:1.7em;
+  /*font-weight: 300;  */
   color: #10284e !important; }
 
 a.text-primary:hover, a.text-primary:focus {
   color: #071224 !important; }
 
 .text-secondary {
-  color: #30caa0 !important; }
+  font-size: 1.3rem;
+  font-weight: 300; 
+  color: rgba(32, 134, 107, 0.8) !important; }
 
 a.text-secondary:hover, a.text-secondary:focus {
   color: #26a17f !important; }

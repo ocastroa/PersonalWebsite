@@ -48,7 +48,7 @@ img {
     background: rgba(32, 134, 107, 0.8); }
 
 #showcase-inner {
-  /* background: url(../img/building.jpg) no-repeat top center fixed/cover; */
+  background: url(../img/building.jpg) no-repeat top center fixed/cover;
   position: relative;
   overflow: hidden;
   height: 100%; }
@@ -99,10 +99,22 @@ text-transform: uppercase;
 letter-spacing: 3px;
 font-family: Arial, sans-serif;}
 
+.about-display {
+font-size: 3.0rem;
+font-weight: 300;
+line-height: 1.2; }
+
 .page-lead {
 font-size: 1.25rem;
 font-weight: 500; 
 font-family: Georgia, serif;}
+
+.tech-tags{list-style:none}
+.tech-tags,.tech-tags>li{margin:0;padding:0;text-decoration: none;}
+.tech-tags>li{display:block}
+.tech-tags li{display:inline-block;overflow:hidden}
+.tech-tags a{display:inline-block;background-color:#6bdcb3;color:#FFF;padding:4px 10px;font-size:13px;text-transform:uppercase}
+.tech-tags a:hover{background-color:#6bdcb3}   
 
 .page-wrap {
 position: fixed;
