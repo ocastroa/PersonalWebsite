@@ -1,7 +1,21 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
+from .models import Portfolio
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
-def portfolio(request):
-    return render(request, 'portfolio/portfolio.html')
+def index(request):
+    portfolio = Portfolio.objects.order_by('-app_id').filter(is_published=True) # order by date
+    paginator = Paginator(portfolio,6)
+    page = request.GET.get('page')
+    paged_portfolio = paginator.get_page(page)
 
-def project(request):
-    return render(request, 'portfolio/project.html')
+    context = {
+        'portfolio': paged_portfolio
+    }
+    return render(request, 'portfolio/portfolio.html', context)
+
+def project(request,slug):
+    project = get_object_or_404(Portfolio, slug=slug)
+    context = {
+        'project': project
+    }
+    return render(request, 'portfolio/project.html', context)

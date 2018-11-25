@@ -1,0 +1,13 @@
+<div class="col-md-6 col-lg-4 mb-4">
+    <div class="card listing-preview">
+        <img class="card-img-top" src="{{ project.photo_main.url }}" alt="">
+        <div class="card-body">
+        <div class="listing-heading text-center">
+            <h4 class="text-primary">{{ project.name_of_app }}</h4>
+        </div>
+        <hr>
+            <p class="lead">{{ project.short_description }} </p>
+        <a href="{% url 'project' project.slug%}" class="btn btn-primary btn-block">More Info</a>
+        </div>
+    </div>
+</div>
