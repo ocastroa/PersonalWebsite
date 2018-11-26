@@ -36,9 +36,7 @@
           <div class="row">
             <div class="col-md-9">
 			  <!-- Home Main Image (FIX IT) -->
-			  <div class="card listing-preview"> 
-				<img src="{{ project.photo_main.url }}" alt="" class="card-img-top">
-			  </div>
+			<img src="{{ project.photo_main_project.url }}" alt="" class="img-main img-fluid mb-3">
               <!-- Thumbnails -->
               <div class="row mb-5 thumbs">
 				{% if project.photo_1 %}
@@ -136,10 +134,9 @@
 					{% endif %} 
 				</ul>				
 			  </div>
-			  
             </div>
             
-            <div class="col-md-3">
+            <div class="col-sm-3">
 			<p class="lead text-secondary text-center">Technologies Used </p>
 			<ul class="tech-tags text-center">
 			{% if project.tags_1 %}
@@ -170,10 +167,25 @@
 			<li>
 				<a href="javascript: void(0)" style="text-decoration: none;" rel="nofollow" target="_blank">{{ project.tags_5 }}</a>
 			</li>            
-			{% endif %}               
+			{% endif %}        
+			{% if project.tags_6 %}
+			<li>
+				<a href="javascript: void(0)" style="text-decoration: none;" rel="nofollow" target="_blank">{{ project.tags_6 }}</a>
+			</li>            
+			{% endif %} 			       
 			</ul>
 			<p class="lead text-secondary text-center" style="margin-top: 0.5em;">Date Finished</p>
 			<p class="lead text-secondary text-center" style="margin-top: -0.6em;">{{ project.date_finished }}</p>
+			{% if project.link_to_project %}
+				<p class="lead text-secondary text-center" style="margin-top: 0.5em;">Link to Project</p>
+				<ul class="tech-tags-two text-center">
+					<a href="{{ project.link_to_project }}" rel="nofollow" target="_blank">
+					<i class="fa fa-link"></i>		
+					Project</a>		
+				</ul>
+			{% endif %}
+
+
             </div>
           </div>
         </div>

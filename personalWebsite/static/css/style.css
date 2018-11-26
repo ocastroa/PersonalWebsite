@@ -116,6 +116,14 @@ font-family: Georgia, serif;}
 .tech-tags a{display:inline-block;background-color:#6bdcb3;color:#FFF;padding:4px 10px;font-size:13px;text-transform:uppercase}
 .tech-tags a:hover{background-color:#6bdcb3}   
 
+.tech-tags-two{list-style:none}
+.tech-tags-two,.tech-tags-two>li{margin:0;padding:0;text-decoration: none;}
+.tech-tags-two>li{display:block}
+.tech-tags-two li{display:inline-block;overflow:hidden}
+.tech-tags-two a{display:inline-block;background-color:#ff3232;color:#FFF;padding:4px 10px;font-size:13px;text-transform:uppercase}
+.tech-tags-two a:hover{background-color:#6bdcb3}   
+/* .tech-tags-two a{display:inline-block;background-color:#ff3232;color:#FFF;padding:4px 10px;font-size:13px;text-transform:uppercase} */
+
 .page-wrap {
 position: fixed;
 width: 80%;
