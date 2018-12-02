@@ -467,6 +467,13 @@ pre {
     .container {
       max-width: 1140px; } }
 
+.container-alt {
+  position: relative;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto; 
+}
+
 .container-fluid {
   width: 100%;
   padding-right: 15px;
@@ -1599,8 +1606,8 @@ textarea.form-control {
       margin-bottom: 0; } }
 
 .btn {
-  display: inline-block;
   font-weight: 400;
+  float: right;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -1609,6 +1616,7 @@ textarea.form-control {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
+  width: 6rem;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media screen and (prefers-reduced-motion: reduce) {
@@ -2034,7 +2042,8 @@ fieldset:disabled a.btn {
 input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
-  width: 100%; }
+  position: relative;
+  width: 20%; }
 
 .fade {
   transition: opacity 0.15s linear; }
@@ -4298,7 +4307,7 @@ button.close {
   vertical-align: text-top !important; }
 
 .bg-primary {
-  background-color: #00004c !important; }
+  background-color: #01396F !important; }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
@@ -6214,9 +6223,9 @@ a.text-primary:hover, a.text-primary:focus {
   color: #071224 !important; }
 
 .text-secondary {
-  font-size: 1.3rem;
-  font-weight: 300; 
-  color: rgba(32, 134, 107, 0.8) !important; }
+  font-size: 1.4rem;
+  font-weight: 350; 
+  color: rgba(24, 124, 97, 0.8) !important; }
 
 a.text-secondary:hover, a.text-secondary:focus {
   color: #26a17f !important; }

@@ -27,8 +27,11 @@
     </div>
 </section>
 <!-- Inquiry Modal -->
-<div class="modal-body py4">
-<form>
+<div class="container-alt">
+<!-- Alerts -->
+{% include 'partials/_alerts.html'%}
+<form action="{% url 'contact' %}" method="POST">
+    {% csrf_token %}
     <div class="form-group">
     <input type="text" name="name" class="form-control" placeholder="Name" required>
     </div>
@@ -38,8 +41,7 @@
     <div class="form-group">
     <textarea name="message" class="form-control" placeholder="You Message"></textarea>
     </div>
-    <hr>
-    <input type="submit" value="Send" class="btn btn-block btn-secondary">
+    <input type="submit" value="Send" class="btn btn-secondary">
 </form>
 </div>
 

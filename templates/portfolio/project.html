@@ -86,7 +86,8 @@
               <!-- Description -->
               <div class="row mb-5">
                 <div class="col-md-12">
-                  talk about what user can do with application i.e. order, pay through app, etc. Do it in a list. Put Accomplish at top of this row.
+					{{project.desc_achieved_0}}
+                  <!-- talk about what user can do with application i.e. order, pay through app, etc. Do it in a list. Put Accomplish at top of this row. -->
 				</div>
 				<ul>
 					{% if project.desc_achieved_1 %}
@@ -110,7 +111,8 @@
 					{% endif %}  					
 				</ul>
 				<div class="col-md-12">
-					talk about technical aspect of project i.e. setting up server, database, etc. Do in a list
+					{{project.desc_technical_0}}
+					<!-- talk about technical aspect of project i.e. setting up server, database, etc. Do in a list -->
 				</div>
 				<ul>
 					{% if project.desc_technical_1 %}
@@ -177,11 +179,11 @@
 			<p class="lead text-secondary text-center" style="margin-top: 0.5em;">Date Finished</p>
 			<p class="lead text-secondary text-center" style="margin-top: -0.6em;">{{ project.date_finished }}</p>
 			{% if project.link_to_project %}
-				<p class="lead text-secondary text-center" style="margin-top: 0.5em;">Link to Project</p>
+				<!-- <p class="lead text-secondary text-center" style="margin-top: 0.5em;">Link to Project</p> -->
 				<ul class="tech-tags-two text-center">
 					<a href="{{ project.link_to_project }}" rel="nofollow" target="_blank">
 					<i class="fa fa-link"></i>		
-					Project</a>		
+					View Project</a>		
 				</ul>
 			{% endif %}
 
