@@ -87,10 +87,9 @@
     
               <!-- Description -->
               <div class="row mb-5">
-                <div class="col-md-12">
-					{{project.desc_achieved_0}}
-                  <!-- talk about what user can do with application i.e. order, pay through app, etc. Do it in a list. Put Accomplish at top of this row. -->
-				</div>
+								<p class="col-md-12">
+									{{project.desc_achieved_0}} 
+								</p>
 				<ul>
 					{% if project.desc_achieved_1 %}
 						<li>{{project.desc_achieved_1}}</li>           
@@ -112,10 +111,10 @@
 						<li>{{project.desc_achieved_5}}</li>           
 					{% endif %}  					
 				</ul>
-				<div class="col-md-12">
+				<p class="col-md-12">
 					{{project.desc_technical_0}}
 					<!-- talk about technical aspect of project i.e. setting up server, database, etc. Do in a list -->
-				</div>
+				</p>
 				<ul>
 					{% if project.desc_technical_1 %}
 						<li>{{project.desc_technical_1}}</li>           

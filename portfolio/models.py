@@ -14,7 +14,7 @@ class Portfolio(models.Model):
     desc_achieved_3 = models.CharField(max_length=200, blank=True)
     desc_achieved_4 = models.CharField(max_length=200, blank=True)
     desc_achieved_5 = models.CharField(max_length=200, blank=True)
-    desc_technical_0 = models.TextField(blank=True)
+    desc_technical_0 = models.CharField(max_length=200,blank=True)
     desc_technical_1 = models.CharField(max_length=200, blank=True)
     desc_technical_2 = models.CharField(max_length=200, blank=True)
     desc_technical_3 = models.CharField(max_length=200, blank=True)
