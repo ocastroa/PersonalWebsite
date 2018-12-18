@@ -28,59 +28,59 @@
     </div>
 </section>
     
-      <!-- Portfolio -->
-      <section id="portfolio" class="py-4">
-        <div class="container">
-          <div class="row">
-						{% if portfolio %}
-							{% for project in portfolio %}
-								{% include 'portfolio_info.html' %}
-							{% endfor %}  
-						{% else %}
-							<div class="col-md-12">
-								<p>No Projects Available</p>
-							</div>
+<!-- Portfolio -->
+<section id="portfolio" class="py-4">
+	<div class="container">
+		<div class="row">
+			{% if portfolio %}
+				{% for project in portfolio %}
+					{% include 'portfolio_info.html' %}
+				{% endfor %}  
+			{% else %}
+				<div class="col-md-12">
+					<p>No Projects Available</p>
+				</div>
+			{% endif %}
+		</div>
+
+	<!-- Create pagination for portfolio -->
+		<div class="row">
+			<div class="col-md-12">
+				{% if portfolio.has_other_pages %}
+					<ul class="pagination">
+						{% if portfolio.has_previous %}
+							<li class="page-item">
+								<a href="?page={{portfolio.previous_page_number}}" class="page_link">&laquo;</a>
+							</li>
+						{% else %} 
+							<li class="page-item-disable">
+								<a class="page-link">&laquo;</a>
+							</li>
 						{% endif %}
-          </div>
- 
-    <!-- Crete pagination for portfolio -->
-					<div class="row">
-						<div class="col-md-12">
-							{% if portfolio.has_other_pages %}
-								<ul class="pagination">
-									{% if portfolio.has_previous %}
-										<li class="page-item">
-											<a href="?page={{portfolio.previous_page_number}}" class="page_link">&laquo;</a>
-										</li>
-									{% else %} 
-										<li class="page-item-disable">
-											<a class="page-link">&laquo;</a>
-										</li>
-									{% endif %}
-									{% for i in portfolio.paginator.page_range %}
-										{% if portfolio.number == i %}
-											<li class="page-item active">
-												<a class="page-link">{{i}}</a>
-											</li>
-										{% else %}  
-											<li class="page-item">
-												<a href="?page={{i}}" class="page-link">{{i}}</a>
-											</li>
-										{% endif %}
-									{% endfor %}
-									{% if portfolio.has_next %}
-									<li class="page-item">
-										<a href="?page={{portfolio.next_page_number}}" class="page_link">&raquo;</a>
-									</li>	
-									{% else %} 
-									<li class="page-item-disable">
-										<a class="page-link">&raquo;</a>
-									</li>
-									{% endif %}
-									</ul>
-								{% endif %}
-							</div>
-						</div>					
-        	</div>
-      </section>
+						{% for i in portfolio.paginator.page_range %}
+							{% if portfolio.number == i %}
+								<li class="page-item active">
+									<a class="page-link">{{i}}</a>
+								</li>
+							{% else %}  
+								<li class="page-item">
+									<a href="?page={{i}}" class="page-link">{{i}}</a>
+								</li>
+							{% endif %}
+						{% endfor %}
+						{% if portfolio.has_next %}
+						<li class="page-item">
+							<a href="?page={{portfolio.next_page_number}}" class="page_link">&raquo;</a>
+						</li>	
+						{% else %} 
+						<li class="page-item-disable">
+							<a class="page-link">&raquo;</a>
+						</li>
+						{% endif %}
+					</ul>
+				{% endif %}
+			</div>
+		</div>					
+	</div>
+</section>
 {% endblock %}

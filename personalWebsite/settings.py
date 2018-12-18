@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '6=_6qp$5&r2ijf_*l!_p^y@9u!%72@r26j%6br(89-=a5#-93-'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -79,10 +80,10 @@ WSGI_APPLICATION = 'personalWebsite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'pwdb' ,
-        'USER': 'postgres',
-        'PASSWORD': 'Ferrari1890!' ,
-        'HOST': 'localhost'
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST')
     }
 }
 
@@ -141,6 +142,6 @@ MESSAGE_TAGS = {
 # Email config	
 EMAIL_HOST = 'smtp.gmail.com'	
 EMAIL_PORT = 587	
-EMAIL_HOST_USER = 'ocastroa@ucsc.edu'	
-EMAIL_HOST_PASSWORD = 'Lightning1890!'	
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')	
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')	
 EMAIL_USE_TLS = True

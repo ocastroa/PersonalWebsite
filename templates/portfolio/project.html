@@ -4,194 +4,193 @@
 
 {% block content %}
 <section id="showcase-inner" class="py-3 text-white">
-        <div class="container">
-          <div class="row text-center">
-            <div class="col-md-12">
-              <h1 class="display-4">{{ project.name_of_app}}</h1>
-              <p class="lead">
-                    {{ project.slogan}}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    
-      <!-- Breadcrumb -->
-      <section id="bc" class="mt-3">
-        <div class="container">
-          <nav>
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="{% url 'index' %}">Home</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="{% url 'portfolio' %}">Portfolio</a>
-              </li>
-              <li class="breadcrumb-item active">{{ project.name_of_app}}</li>
-            </ol>
-          </nav>
-        </div>
-      </section>
-    
-      <!-- Listing -->
-      <section id="listing" class="py-4">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-9">
-			  <!-- Home Main Image (FIX IT) -->
-			<img src="{{ project.photo_main_project.url }}" alt="" class="img-main img-fluid mb-3">
-              <!-- Thumbnails -->
-              <div class="row mb-5 thumbs">
-				{% if project.photo_1 %}
-					<div class="col-md-2">
-					<a href="{{ project.photo_1.url }}" data-lightbox="home-images">
-						<img src="{{ project.photo_1.url }}" alt="" class="img-fluid">
-					</a>
-					</div>
-                {% endif %}
-                {% if project.photo_2%}
-                    <div class="col-md-2">
-                    <a href="{{ project.photo_2.url }}" data-lightbox="home-images">
-                        <img src="{{ project.photo_2.url }}" alt="" class="img-fluid">
-                    </a>
-                    </div>
-                {% endif %}
-                {% if project.photo_3%}
-                    <div class="col-md-2">
-                    <a href="{{ project.photo_3.url }}" data-lightbox="home-images">
-                        <img src="{{ project.photo_3.url }}" alt="" class="img-fluid">
-                    </a>
-                    </div>
-                {% endif %}
-                {% if project.photo_4%}
-                    <div class="col-md-2">
-                    <a href="{{ project.photo_4.url }}" data-lightbox="home-images">
-                        <img src="{{ project.photo_4.url }}" alt="" class="img-fluid">
-                    </a>
-                    </div>
-                {% endif %}
-                {% if project.photo_5%}
-                    <div class="col-md-2">
-                    <a href="{{ project.photo_5.url }}" data-lightbox="home-images">
-                        <img src="{{ project.photo_5.url }}" alt="" class="img-fluid">
-                    </a>
-                    </div>
-                {% endif %}
-                {% if project.photo_6%}
-                    <div class="col-md-2">
-                    <a href="{{ project.photo_6.url }}" data-lightbox="home-images">
-                        <img src="{{ project.photo_6.url }}" alt="" class="img-fluid">
-                    </a>
-                    </div>
-                {% endif %}
-              </div>
-    
-              <!-- Description -->
-              <div class="row mb-5">
-								<p class="col-md-12">
-									{{project.desc_achieved_0}} 
-								</p>
-				<ul>
-					{% if project.desc_achieved_1 %}
-						<li>{{project.desc_achieved_1}}</li>           
-					{% endif %}
-				
-					{% if project.desc_achieved_2 %}
-						<li>{{project.desc_achieved_2}}</li>           
-					{% endif %}            
-				
-					{% if project.desc_achieved_3 %}
-						<li>{{project.desc_achieved_3}}</li>                     
-					{% endif %}
-				
-					{% if project.desc_achieved_4 %}
-						<li>{{project.desc_achieved_4}}</li>                   
-					{% endif %} 
-				
-					{% if project.desc_achieved_5 %}
-						<li>{{project.desc_achieved_5}}</li>           
-					{% endif %}  					
-				</ul>
-				<p class="col-md-12">
-					{{project.desc_technical_0}}
-					<!-- talk about technical aspect of project i.e. setting up server, database, etc. Do in a list -->
-				</p>
-				<ul>
-					{% if project.desc_technical_1 %}
-						<li>{{project.desc_technical_1}}</li>           
-					{% endif %}
-				
-					{% if project.desc_technical_2 %}
-						<li>{{project.desc_technical_2}}</li>           
-					{% endif %}            
-				
-					{% if project.desc_technical_3 %}
-						<li>{{project.desc_technical_3}}</li>                     
-					{% endif %}
-				
-					{% if project.desc_technical_4 %}
-						<li>{{project.desc_technical_4}}</li>                   
-					{% endif %} 
-				
-					{% if project.desc_technical_5 %}
-						<li>{{project.desc_technical_5}}</li>           
-					{% endif %} 
-				</ul>				
-			  </div>
-            </div>
-            
-            <div class="col-sm-3">
-			<p class="lead text-secondary text-center">Technologies Used </p>
-			<ul class="tech-tags text-center">
-			{% if project.tags_1 %}
-				<li>
-				<a href="javascript: void(0)" style="text-decoration: none;" rel="nofollow" target="_blank">{{ project.tags_1 }}</a>
-				</li>            
-			{% endif %}
-		
-			{% if project.tags_2 %}
-				<li>
-				<a href="javascript: void(0)" style="text-decoration: none;" rel="nofollow" target="_blank">{{ project.tags_2 }}</a>
-				</li>            
-			{% endif %}            
-		
-			{% if project.tags_3 %}
-				<li>
-				<a href="javascript: void(0)" style="text-decoration: none;" rel="nofollow" target="_blank">{{ project.tags_3 }}</a>
-				</li>            
-			{% endif %}
-		
-			{% if project.tags_4 %}
-				<li>
-				<a href="javascript: void(0)" style="text-decoration: none;" rel="nofollow" target="_blank">{{ project.tags_4 }}</a>
-				</li>            
-			{% endif %} 
-		
-			{% if project.tags_5 %}
-			<li>
-				<a href="javascript: void(0)" style="text-decoration: none;" rel="nofollow" target="_blank">{{ project.tags_5 }}</a>
-			</li>            
-			{% endif %}        
-			{% if project.tags_6 %}
-			<li>
-				<a href="javascript: void(0)" style="text-decoration: none;" rel="nofollow" target="_blank">{{ project.tags_6 }}</a>
-			</li>            
-			{% endif %} 			       
-			</ul>
-			<p class="lead text-secondary text-center" style="margin-top: 0.5em;">Date Finished</p>
-			<p class="lead text-secondary text-center" style="margin-top: -0.6em;">{{ project.date_finished }}</p>
-			{% if project.link_to_project %}
-				<!-- <p class="lead text-secondary text-center" style="margin-top: 0.5em;">Link to Project</p> -->
-				<ul class="tech-tags-two text-center">
-					<a href="{{ project.link_to_project }}" rel="nofollow" target="_blank">
-					<i class="fa fa-link"></i>		
-					View Project</a>		
-				</ul>
-			{% endif %}
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-md-12">
+				<h1 class="display-4">{{ project.name_of_app}}</h1>
+				<p class="lead">
+							{{ project.slogan}}</p>
+			</div>
+		</div>
+	</div>
+</section>
 
-
-            </div>
-          </div>
-        </div>
-      </section>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+	<div class="container">
+		<nav>
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="{% url 'index' %}">Home</a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="{% url 'portfolio' %}">Portfolio</a>
+				</li>
+				<li class="breadcrumb-item active">{{ project.name_of_app}}</li>
+			</ol>
+		</nav>
+	</div>
+</section>
     
+<!-- Listing -->
+<section id="listing" class="py-4">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<!-- Home Main Image -->
+				<img src="{{ project.photo_main_project.url }}" alt="" class="img-main img-fluid mb-3">
+				<!-- Thumbnails -->
+				<div class="row mb-5 thumbs">
+					{% if project.photo_1 %}
+						<div class="col-md-2">
+						<a href="{{ project.photo_1.url }}" data-lightbox="home-images">
+							<img src="{{ project.photo_1.url }}" alt="" class="img-fluid">
+						</a>
+						</div>
+					{% endif %}
+					{% if project.photo_2%}
+						<div class="col-md-2">
+						<a href="{{ project.photo_2.url }}" data-lightbox="home-images">
+								<img src="{{ project.photo_2.url }}" alt="" class="img-fluid">
+						</a>
+						</div>
+					{% endif %}
+					{% if project.photo_3%}
+						<div class="col-md-2">
+						<a href="{{ project.photo_3.url }}" data-lightbox="home-images">
+								<img src="{{ project.photo_3.url }}" alt="" class="img-fluid">
+						</a>
+						</div>
+					{% endif %}
+					{% if project.photo_4%}
+						<div class="col-md-2">
+						<a href="{{ project.photo_4.url }}" data-lightbox="home-images">
+								<img src="{{ project.photo_4.url }}" alt="" class="img-fluid">
+						</a>
+						</div>
+					{% endif %}
+					{% if project.photo_5%}
+						<div class="col-md-2">
+						<a href="{{ project.photo_5.url }}" data-lightbox="home-images">
+								<img src="{{ project.photo_5.url }}" alt="" class="img-fluid">
+						</a>
+						</div>
+					{% endif %}
+					{% if project.photo_6%}
+						<div class="col-md-2">
+						<a href="{{ project.photo_6.url }}" data-lightbox="home-images">
+								<img src="{{ project.photo_6.url }}" alt="" class="img-fluid">
+						</a>
+						</div>
+					{% endif %}
+				</div>
+
+				<!-- Description -->
+				<div class="row mb-5">
+					<p class="col-md-12">
+						{{project.desc_achieved_0}} 
+					</p>
+					<ul>
+						{% if project.desc_achieved_1 %}
+							<li>{{project.desc_achieved_1}}</li>           
+						{% endif %}
+					
+						{% if project.desc_achieved_2 %}
+							<li>{{project.desc_achieved_2}}</li>           
+						{% endif %}            
+					
+						{% if project.desc_achieved_3 %}
+							<li>{{project.desc_achieved_3}}</li>                     
+						{% endif %}
+					
+						{% if project.desc_achieved_4 %}
+							<li>{{project.desc_achieved_4}}</li>                   
+						{% endif %} 
+					
+						{% if project.desc_achieved_5 %}
+							<li>{{project.desc_achieved_5}}</li>           
+						{% endif %}  					
+					</ul>
+					<p class="col-md-12">
+						{{project.desc_technical_0}}
+						<!-- talk about technical aspect of project i.e. setting up server, database, etc. Do in a list -->
+					</p>
+					<ul>
+						{% if project.desc_technical_1 %}
+							<li>{{project.desc_technical_1}}</li>           
+						{% endif %}
+					
+						{% if project.desc_technical_2 %}
+							<li>{{project.desc_technical_2}}</li>           
+						{% endif %}            
+					
+						{% if project.desc_technical_3 %}
+							<li>{{project.desc_technical_3}}</li>                     
+						{% endif %}
+					
+						{% if project.desc_technical_4 %}
+							<li>{{project.desc_technical_4}}</li>                   
+						{% endif %} 
+					
+						{% if project.desc_technical_5 %}
+							<li>{{project.desc_technical_5}}</li>           
+						{% endif %} 
+					</ul>			
+				</div>
+			</div>
+			
+			<div class="col-sm-3">
+				<p class="lead text-secondary text-center">Technologies Used </p>
+				<ul class="tech-tags text-center">
+					{% if project.tags_1 %}
+						<li>
+						<a href="javascript: void(0)" style="text-decoration: none;" rel="nofollow" target="_blank">{{ project.tags_1 }}</a>
+						</li>            
+					{% endif %}
+
+					{% if project.tags_2 %}
+						<li>
+						<a href="javascript: void(0)" style="text-decoration: none;" rel="nofollow" target="_blank">{{ project.tags_2 }}</a>
+						</li>            
+					{% endif %}            
+
+					{% if project.tags_3 %}
+						<li>
+						<a href="javascript: void(0)" style="text-decoration: none;" rel="nofollow" target="_blank">{{ project.tags_3 }}</a>
+						</li>            
+					{% endif %}
+
+					{% if project.tags_4 %}
+						<li>
+						<a href="javascript: void(0)" style="text-decoration: none;" rel="nofollow" target="_blank">{{ project.tags_4 }}</a>
+						</li>            
+					{% endif %} 
+
+					{% if project.tags_5 %}
+					<li>
+						<a href="javascript: void(0)" style="text-decoration: none;" rel="nofollow" target="_blank">{{ project.tags_5 }}</a>
+					</li>            
+					{% endif %}   
+
+					{% if project.tags_6 %}
+					<li>
+						<a href="javascript: void(0)" style="text-decoration: none;" rel="nofollow" target="_blank">{{ project.tags_6 }}</a>
+					</li>            
+					{% endif %} 			       
+				</ul>
+
+				<p class="lead text-secondary text-center" style="margin-top: 0.5em;">Date Finished</p>
+				<p class="lead text-secondary text-center" style="margin-top: -0.6em;">{{ project.date_finished }}</p>
+
+				{% if project.link_to_project %}
+					<ul class="tech-tags-two text-center">
+						<a href="{{ project.link_to_project }}" rel="noopener noreferrer" target="_blank">
+						<i class="fa fa-link"></i>		
+						View Project</a>		
+					</ul>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>
 {% endblock %}

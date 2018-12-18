@@ -13,8 +13,8 @@
     </div>
 </section>
     
-    <!-- Breadcrumb -->
-    <section id="bc" class="mt-3">
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
     <div class="container">
         <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -26,17 +26,22 @@
         </ol>
         </nav>
     </div>
-    </section>
+</section>
 
-    <section id="about" class="py-2">
+<section id="about" class="py-2">
     <div class="container">
         <div class="row">
         <div class="col-md-8">
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse officia repudiandae ad saepe ex, amet
-            neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis? Exercitationem at quaerat
-            commodi id libero eveniet harum perferendis laborum molestias quia.</p>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse officia repudiandae ad saepe ex, amet
-            neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis?</p>            
+            <p class="lead">
+                I started college as a physics major but switched after taking an intro to computer science course. While I loved learning about space and quantum theory, I loved programming more. I was able to create anything from scratch! In my third year I became curious about mobile development, so I learned how to develop Android apps by watching Youtube videos. When I had enough basic knowledge, I decided to develop my first Android app, Big O, which I published in the play store. From then on I was hooked! I worked on two more Android apps throughout college and three web applications, including this site. You can checkout out my projects 
+                <a href="{% url  'portfolio' %}" style="color:#B20000">here</a>.
+                Working on all these projects sparked a passion for creating great software products. 
+            </p>
+            <p class="lead">When I am not brainstorming ideas for a new project or working on a current project, I like to read, play guitar, listen to music, or watch Star Trek!  
+            </p>     
+            <p class="lead">I am currently looking for opportunities as a software engineer in the Bay Area. Contact me  
+                <a href="{% url  'contact' %}" style="color:#B20000">here</a>.
+            </p>         
         </div>
         
         <div class="col-md-4">
@@ -44,16 +49,9 @@
             {% for pic in oscars_pic %}
                 <img class="card-img-top" src="{{ pic.photo.url }}">
             {% endfor %}
-            <!-- <div class="card-body"> -->
-                <!-- <h6 class="text-secondary text-center">Oscar Castro</h6> -->
-                <!-- <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nesciunt amet, illo itaque similique repellat.
-                content.
-                </p> -->
-            <!-- </div> -->
             </div>
         </div>
-
         </div>
     </div>
-    </section>
+</section>
 {% endblock %}

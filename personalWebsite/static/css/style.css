@@ -15,7 +15,7 @@ img {
   margin-right: 0.4rem; }
 
 #showcase {
-  background-image: url(../img/mars_two.jpg); 
+  background-image: url(../img/nice_view.jpg); 
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -126,10 +126,10 @@ font-weight: 300;
 line-height: 1.2; }
 
 .page-lead {
-font-size: 1.5rem;
-font-weight: 600; 
+font-size: 1.7rem;
+font-weight: 550; 
 color: white;
-font-family: Arial, serif;}
+font-family: sans-serif;}
 
 .tech-tags{list-style:none}
 .tech-tags,.tech-tags>li{margin:0;padding:0;text-decoration: none;}

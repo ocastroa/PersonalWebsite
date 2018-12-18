@@ -15,13 +15,13 @@ def index(request):
 
         contacts.save()
 
-        # send_mail(
-        #     'Email received from ' + name,
-        #     'You have received an email from your personal page. Check the admin panel to see message.',
-        #     email,
-        #     ['oscarcastro_777@hotmail.com'],
-        #     fail_silently=False,
-        # )
+        send_mail(
+            'Email received from ' + name,
+            'You have received an email from your personal page. \n' + 'Message: ' + message,
+            email,
+            ['oscarcastro_777@hotmail.com'],
+            fail_silently=False,
+        )
 
         messages.success(request, 'Your message has been sent. I will get back to you shortly!')    
     return render(request, 'contact/contact.html')
