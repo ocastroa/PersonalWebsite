@@ -26,7 +26,6 @@ class Portfolio(models.Model):
     tags_4 = models.CharField(max_length=20, blank=True)
     tags_5 = models.CharField(max_length=20, blank=True)
     tags_6 = models.CharField(max_length=20, blank=True)
-    photo_main_portfolio = models.ImageField(upload_to='photos/%Y/%m/%d')
     photo_main_project = models.ImageField(upload_to='photos/%Y/%m/%d', blank=True)
     photo_1 = models.ImageField(upload_to='photos/%Y/%m/%d', blank=True)
     photo_2 = models.ImageField(upload_to='photos/%Y/%m/%d', blank=True)
