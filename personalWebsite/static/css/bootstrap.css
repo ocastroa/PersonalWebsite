@@ -2090,7 +2090,7 @@ input[type="button"].btn-block {
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 1000;
+  z-index: 2500 !important;
   display: none;
   float: left;
   min-width: 10rem;
@@ -2839,13 +2839,15 @@ input[type="button"].btn-block {
   flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
-  list-style: none; }
+  list-style: none;
+  z-index: 25000 !important; }
   .navbar-nav .nav-link {
     padding-right: 0;
     padding-left: 0; }
   .navbar-nav .dropdown-menu {
     position: static;
-    float: none; }
+    float: none; 
+    z-index: 25000 !important;}
 
 .navbar-text {
   display: inline-block;
