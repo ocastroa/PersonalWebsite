@@ -5077,11 +5077,11 @@ button.bg-dark:focus {
   left: 0;
   z-index: 1030; }
 
-@supports (position: sticky) {
+@supports (position: relative) {
   .sticky-top {
-    position: sticky;
+    position: relative;
     top: 0;
-    z-index: 1020; } }
+    z-index: 2500 !important; } }
 
 .sr-only {
   position: absolute;
