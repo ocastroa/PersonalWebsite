@@ -189,6 +189,22 @@
 						View Project</a>		
 					</ul>
 				{% endif %}
+
+				{% if project.link_to_demo %}
+					<ul class="tech-tags-two text-center">
+						<a href="{{ project.link_to_demo }}" rel="noopener noreferrer" target="_blank">
+						<i class="fa fa-link"></i>		
+						View Demo</a>		
+					</ul>
+				{% endif %}
+
+				{% if project.link_to_product_page %}
+					<ul class="tech-tags-two text-center">
+						<a href="{{ project.link_to_product_page }}" rel="noopener noreferrer" target="_blank">
+						<i class="fa fa-link"></i>		
+						Product Page</a>		
+					</ul>
+				{% endif %}
 			</div>
 		</div>
 	</div>

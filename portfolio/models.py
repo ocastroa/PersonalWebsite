@@ -8,6 +8,8 @@ class Portfolio(models.Model):
     short_description = models.CharField(max_length=200)
     date_finished= models.CharField(max_length=10)
     link_to_project = models.CharField(max_length=300, blank=True)
+    link_to_demo = models.CharField(max_length=300, blank=True)
+    link_to_product_page = models.CharField(max_length=300, blank=True)
     desc_achieved_0 = models.TextField(blank=True)
     desc_achieved_1 = models.CharField(max_length=200, blank=True)
     desc_achieved_2 = models.CharField(max_length=200, blank=True)
