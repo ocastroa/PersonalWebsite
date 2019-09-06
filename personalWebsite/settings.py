@@ -129,6 +129,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'personalWebsite/static')
 ]
 
+SILENCED_SYSTEM_CHECKS = ['urls.W002']
+
 # Media Folder Settings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
