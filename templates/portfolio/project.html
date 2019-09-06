@@ -90,6 +90,9 @@
 					<p class="col-md-12">
 						{{project.desc_achieved_0}} 
 					</p>
+
+					<strong class="col-md-12">Functionality: </strong>
+
 					<ul>
 						{% if project.desc_achieved_1 %}
 							<li>{{project.desc_achieved_1}}</li>           
@@ -111,31 +114,6 @@
 							<li>{{project.desc_achieved_5}}</li>           
 						{% endif %}  					
 					</ul>
-					<p class="col-md-12">
-						{{project.desc_technical_0}}
-						<!-- talk about technical aspect of project i.e. setting up server, database, etc. Do in a list -->
-					</p>
-					<ul>
-						{% if project.desc_technical_1 %}
-							<li>{{project.desc_technical_1}}</li>           
-						{% endif %}
-					
-						{% if project.desc_technical_2 %}
-							<li>{{project.desc_technical_2}}</li>           
-						{% endif %}            
-					
-						{% if project.desc_technical_3 %}
-							<li>{{project.desc_technical_3}}</li>                     
-						{% endif %}
-					
-						{% if project.desc_technical_4 %}
-							<li>{{project.desc_technical_4}}</li>                   
-						{% endif %} 
-					
-						{% if project.desc_technical_5 %}
-							<li>{{project.desc_technical_5}}</li>           
-						{% endif %} 
-					</ul>			
 				</div>
 			</div>
 			
