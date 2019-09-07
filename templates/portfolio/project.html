@@ -122,37 +122,37 @@
 				<ul class="tech-tags text-center">
 					{% if project.tags_1 %}
 						<li>
-						<a href="javascript: void(0)" style="margin-bottom: 0.1em;" rel="nofollow" target="_blank" >{{ project.tags_1 }}</a>
+						<a href="javascript: void(0)" style="margin-bottom: 0.1em; border-radius: 4.5px;" rel="nofollow" target="_blank" >{{ project.tags_1 }}</a>
 						</li>            
 					{% endif %}
 
 					{% if project.tags_2 %}
 						<li>
-						<a href="javascript: void(0)" style="margin-bottom: 0.1em;" rel="nofollow" target="_blank">{{ project.tags_2 }}</a>
+						<a href="javascript: void(0)" style="margin-bottom: 0.1em; border-radius: 4.5px;" rel="nofollow" target="_blank">{{ project.tags_2 }}</a>
 						</li>            
 					{% endif %}            
 
 					{% if project.tags_3 %}
 						<li>
-						<a href="javascript: void(0)" style="margin-bottom: 0.1em;" rel="nofollow" target="_blank">{{ project.tags_3 }}</a>
+						<a href="javascript: void(0)" style="margin-bottom: 0.1em; border-radius: 4.5px;" rel="nofollow" target="_blank">{{ project.tags_3 }}</a>
 						</li>            
 					{% endif %}
 
 					{% if project.tags_4 %}
 						<li>
-						<a href="javascript: void(0)" style="margin-bottom: 0.1em;" rel="nofollow" target="_blank">{{ project.tags_4 }}</a>
+						<a href="javascript: void(0)" style="margin-bottom: 0.1em; border-radius: 4.5px;" rel="nofollow" target="_blank">{{ project.tags_4 }}</a>
 						</li>            
 					{% endif %} 
 
 					{% if project.tags_5 %}
 					<li>
-						<a href="javascript: void(0)" style="margin-bottom: 0.1em;" rel="nofollow" target="_blank">{{ project.tags_5 }}</a>
+						<a href="javascript: void(0)" style="margin-bottom: 0.1em; border-radius: 4.5px;" rel="nofollow" target="_blank">{{ project.tags_5 }}</a>
 					</li>            
 					{% endif %}   
 
 					{% if project.tags_6 %}
 					<li>
-						<a href="javascript: void(0)" style="margin-bottom: 0.1em;" rel="nofollow" target="_blank">{{ project.tags_6 }}</a>
+						<a href="javascript: void(0)" style="margin-bottom: 0.1em; border-radius: 4.5px;" rel="nofollow" target="_blank">{{ project.tags_6 }}</a>
 					</li>            
 					{% endif %} 			       
 				</ul>
@@ -162,27 +162,30 @@
 
 				{% if project.link_to_project %}
 					<ul class="tech-tags-two text-center">
-						<a href="{{ project.link_to_project }}" rel="noopener noreferrer" target="_blank">
+						<a href="{{ project.link_to_project }}" rel="noopener noreferrer" target="_blank" style="
+						border-radius: 4.5px;">
 						<i class="fa fa-link"></i>		
-						View Project</a>		
+						 GitHub Repo</a>		
 					</ul>
 				{% endif %}
 
 				{% if project.link_to_demo %}
 					<ul class="tech-tags-two text-center">
-						<a href="{{ project.link_to_demo }}" rel="noopener noreferrer" target="_blank">
+						<a href="{{ project.link_to_demo }}" rel="noopener noreferrer" target="_blank" style="
+						border-radius: 4.5px;">
 						<i class="fa fa-link"></i>		
-						View Demo</a>		
+						 Live Demo</a>		
 					</ul>
 				{% endif %}
 
 				{% if project.link_to_product_page %}
 					<ul class="tech-tags-two text-center">
-						<a href="{{ project.link_to_product_page }}" rel="noopener noreferrer" target="_blank">
+						<a href="{{ project.link_to_product_page }}" rel="noopener noreferrer" target="_blank" style="
+						border-radius: 4.5px;">
 						<i class="fa fa-link"></i>		
-						Product Page</a>		
+						 Product Page</a>		
 					</ul>
-				{% endif %}
+				{% endif %}	
 			</div>
 		</div>
 	</div>

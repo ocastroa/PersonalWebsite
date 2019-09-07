@@ -130,6 +130,7 @@ STATICFILES_DIRS = [
 ]
 
 SILENCED_SYSTEM_CHECKS = ['urls.W002']
+FILE_UPLOAD_PERMISSIONS=0o640
 
 # Media Folder Settings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
