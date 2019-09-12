@@ -15,7 +15,7 @@ img {
   margin-right: 0.4rem; }
 
 #showcase {
-  background-image: url(../img/nice_view_three.jpg); 
+  background-image: url(../img/city_view.jpg); 
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -127,9 +127,9 @@ line-height: 1.2; }
 
 .page-lead {
 font-size: 1.7rem;
-font-weight: 550; 
+font-weight: 625; 
 color: white;
-font-family: sans-serif;}
+}
 
 .tech-tags{list-style:none}
 .tech-tags,.tech-tags>li{margin:0;padding:0;text-decoration: none;}
