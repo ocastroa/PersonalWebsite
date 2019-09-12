@@ -17,7 +17,7 @@ def index(request):
 
         send_mail(
             'Email received from ' + name,
-            'You have received an email from your personal page. \n' + 'Message: ' + message,
+            'You have received an email from your personal page. \n' + 'Message: ' + message + '\nEmail: ' + email,
             email,
             ['oscarcastro_777@hotmail.com'],
             fail_silently=False,
