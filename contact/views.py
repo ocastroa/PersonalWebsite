@@ -16,8 +16,8 @@ def index(request):
         contacts.save()
 
         send_mail(
-            'Email received from ' + name,
-            'You have received an email from your personal page. \n' + 'Message: ' + message + '\nEmail: ' + email,
+            'Email received from personal website',
+            'Name: ' + name + '\nEmail: ' + email+ '\nMessage: ' + message,
             email,
             ['oscarcastro_777@hotmail.com'],
             fail_silently=False,
