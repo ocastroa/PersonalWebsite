@@ -468,6 +468,7 @@ pre {
       max-width: 1140px; } }
 
 .container-alt {
+  overflow-x: hidden;
   position: relative;
   width: 60%;
   margin-right: auto;

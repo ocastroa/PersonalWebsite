@@ -4,51 +4,66 @@
 
 {% block content %}
 <section id="showcase-inner" class="py-3 text-white">
-    <div class="container">
-        <div class="row text-center">
-        <div class="col-md-12">
-            <h1 class="about-display">ABOUT ME</h1>
-        </div>
-        </div>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h1 class="about-display">ABOUT ME</h1>
+      </div>
     </div>
+  </div>
 </section>
-    
+
 <!-- Breadcrumb -->
 <section id="bc" class="mt-3">
-    <div class="container">
-        <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-            <a href="{% url 'index' %}">
-                <i class="fas fa-home"></i> Home</a>
-            </li>
-            <li class="breadcrumb-item active"> About</li>
-        </ol>
-        </nav>
-    </div>
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="{% url 'index' %}">
+            <i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="breadcrumb-item active"> About</li>
+      </ol>
+    </nav>
+  </div>
 </section>
 
 <section id="about" class="py-2">
-    <div class="container">
-        <div class="row">
-        <div class="col-md-8">
-            <p class="lead">
-                My love for coding began after I developed and published my first Android app, <a href="https://play.google.com/store/apps/details?id=com.envision_lightning.big_o&hl=en_US" rel="noopener noreferrer" target="_blank" style="color:#B20000">Big O</a>.
-                I had a lot of fun working on this app and it sparked my interest in mobile development. After graduating UC Santa Cruz with a B.S. in Computer Science, I landed an internship at PubNub as a Developer Relations Engineer. I learned a lot in my internship, from working with frameworks like React/React Native to improving how I network with other engineers at meetups. In four months, I strengthen my technical skills in web and mobile development, as well as advance my technical writing skills. 
-                             
-            <p class="lead">Besides working on projects, I like to workout, read, listen to music, and binge watch shows.
-            </p>     
-            <p class="lead">I am currently looking for opportunities as a Software Engineer or a DevRel Engineer in the Bay Area. You can contact me  
-                <a href="{% url  'contact' %}" style="color:#B20000">here</a>.
-            </p>         
-        </div>
-        
-        <div class="col-md-4">
-            {% for pic in oscars_pic %}
-                <img class="rounded-circle mb-3" src="{{ pic.photo.url }}">
-            {% endfor %}
-        </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <p class="lead">
+          My love for coding began while working on my first
+          Android app,
+          <a href="https://play.google.com/store/apps/details?id=com.envision_lightning.big_o&hl=en_US"
+            rel="noopener noreferrer" target="_blank" style="color:#B20000">Big O</a>. I had a lot of fun working on
+          this app and it sparked my interest
+          in mobile development. After graduating UC Santa Cruz with a B.S. in
+          Computer Science, I landed an internship at PubNub as a Developer
+          Relations Engineer. I learned a lot during my internship, such as learning
+          new frameworks like React/React Native to improving how I network with
+          other engineers at meetups. In four months, I strengthen my technical
+          skills in web and mobile development, as well as improve on my technical
+          writing skills.
+        </p>
+
+        <p class="lead">
+          Besides coding, I like to workout, read, listen to music,
+          and binge watch shows.
+        </p>
+        <p class="lead">
+          I am currently looking for opportunities as a Software Engineer or a
+          DevRel Engineer in the Bay Area. I am open to remote jobs as well! You can contact me
+          <a href="{% url  'contact' %}" style="color:#B20000">here</a>.
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        {% for pic in oscars_pic %}
+        <img class="rounded-circle mb-3" src="{{ pic.photo.url }}" />
+        {% endfor %}
+      </div>
     </div>
+  </div>
 </section>
 {% endblock %}

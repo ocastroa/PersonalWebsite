@@ -1,17 +1,18 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147974938-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'UA-147974938-1');
+        gtag('config', 'UA-147974938-1');
     </script>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -20,15 +21,18 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <!-- Custom -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Light Box -->
-    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
+
     <title>Oscar Castro {% block title %}{% endblock %}</title>
 </head>
 
 <body>
     <div id="wrapper">
-      <!-- Nav Bar -->
+        <!-- Nav Bar -->
         {% include 'partials/_navbar.html'%}
         <div id="content">
             <!-- Main Content -->
@@ -36,7 +40,7 @@
         </div>
         <div id="alt-footer">
             <!-- Footer -->
-            {% include 'partials/_footer.html'%}     
+            {% include 'partials/_footer.html'%}
         </div>
 
         <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
@@ -45,4 +49,5 @@
         <script src="{% static 'js/lightbox.min.js' %}"></script>
     </div>
 </body>
+
 </html>
