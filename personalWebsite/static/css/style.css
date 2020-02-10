@@ -126,11 +126,18 @@ body {
 }
 .tech-tags a {
   display: inline-block;
+  height: 2.6em;
   background-color: #05c07c;
   color: #fff;
-  padding: 4px 10px;
+  padding: 6.8px 10px;
   font-size: 13px;
   text-transform: uppercase;
+}
+@media (max-width: 576px) {
+  .tech-tags a {
+    height: 2.8em;
+    padding: 8px 10px;
+  }
 }
 
 .tech-tags-two {
@@ -151,12 +158,21 @@ body {
 }
 .tech-tags-two a {
   display: inline-block;
+  height: 2.6em;
   background-color: #ff3232;
   color: #fff;
-  padding: 4px 10px;
+  padding: 6.8px 10px;
   font-size: 13px;
   text-transform: uppercase;
 }
+
+@media (max-width: 576px) {
+  .tech-tags-two a {
+    height: 2.8em;
+    padding: 8px 10px;
+  }
+}
+
 .tech-tags-two a:hover {
   background-color: #ff3232d3;
 }
